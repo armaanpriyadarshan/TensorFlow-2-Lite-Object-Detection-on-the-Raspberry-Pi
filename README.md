@@ -11,11 +11,10 @@ This repository is a written tutorial covering two topics. TensorFlow Lite conve
 **I will soon make a YouTube Tutorial which will be posted [here](), and an extremely import step [here](https://www.youtube.com/channel/UCT9t2Bug62RDUfSBcPt0Bzg?sub_confirmation=1)!**
 
 ## Table of Contents
-1. [Setting up the Raspberry Pi and Getting Updates](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-1-setting-up-the-raspberry-pi-and-getting-updates)
-2. [Organizing our Workspace and Virtual Environment](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi#step-2-organizing-our-workspace-and-virtual-environment)
-3. [Installing TensorFlow, OpenCV, and other Prerequisites](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-3-installing-tensorflow-opencv-and-other-prerequisites)
-4. [Preparing our Object Detection Model](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-4-preparing-our-object-detection-model)
-5. [Running Object Detection on Image, Video, or Pi Camera](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-5-running-object-detection-on-image-video-or-pi-camera)
+1. [Setting up the Raspberry Pi and Getting Updates]()
+2. [Organizing our Workspace and Virtual Environment]()
+3. [Installing the Prerequisites]()
+4. [Running Object Detection on Image, Video, or Pi Camera]()
 
 ## Step 1: Setting up the Raspberry Pi and Getting Updates
 Before we can get started, we must have access to the Raspberry Pi's Desktop Interface. This can be done with VNC Viewer or the standard Monitor and HDMI. I made a more detailed video which can be found below
@@ -46,13 +45,13 @@ Then navigate to Interfacing Options -> Camera and make sure it is enabled. Then
 Then, your going to want to clone this repository with
 
 ```
-git clone https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi.git
+git clone https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi.git
 ```
 
 This name is a bit long so let's trim it down with
 
 ```
-mv Object-Detection-on-Raspberry-Pi tensorflow
+mv TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi tensorflow
 ```
 
 We are now going to create a Virtual Environment to avoid version conflicts with previously installed packages on the Raspberry Pi. First, let's install virtual env with
