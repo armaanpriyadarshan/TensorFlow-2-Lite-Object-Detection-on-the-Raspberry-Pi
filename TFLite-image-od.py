@@ -1,3 +1,6 @@
+# This is Edje Electronics' code with some minor adjustments
+# Credit goes to his repo: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi
+
 import tflite_runtime.interpreter as tflite
 import os
 import argparse
