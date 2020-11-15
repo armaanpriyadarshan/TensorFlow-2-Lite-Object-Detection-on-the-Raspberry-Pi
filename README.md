@@ -119,4 +119,4 @@ If everything went according to plan, you should get
 ```
 2.5.0
 ```
-**Note, the link for downloading the tflite_runtime module is bound to change based on your Python version and platform/architecture. With time, newer versions will be also be released. I'll try my best to update this guide frequently, but the newest instructions for the installation are located [here](https://www.tensorflow.org/lite/guide/python)**
+**Note: The link for downloading the tflite_runtime module is bound to change based on your Python version and platform/architecture. With time, newer versions will be also be released. I'll try my best to update this guide frequently, but the most recent instructions for the installation are located [here](https://www.tensorflow.org/lite/guide/python)**
