@@ -20,7 +20,7 @@ This guide is my 3rd in a series about the TensorFlow Object Detection API. Of m
 
 ## Table of Contents
 1. [Setting up the Raspberry Pi and Getting Updates](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/README.md#step-1-setting-up-the-raspberry-pi-and-getting-updates)
-2. [Organizing our Workspace and Virtual Environment]()
+2. [Organizing our Workspace and Virtual Environment](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/README.md#step-2-organizing-our-workspace-and-virtual-environment)
 3. [Installing the Prerequisites]()
 4. [Running Object Detection on Image, Video, or Pi Camera]()
 
