@@ -103,3 +103,20 @@ This might take a few minutes, but after everything has been installed you shoul
 ```
 Prerequisites Installed Successfully
 ```
+Now, it's best to test our installation of the tflite_runtime module. To do this first type
+```
+python
+```
+From the Python terminal, enter these lines
+```
+Python 3.7.3 (default, Jul 25 2020, 13:03:44)
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tflite_runtime as tf
+>>> print(tf.__version__)
+```
+If everything went according to plan, you should get 
+```
+2.5.0
+```
+**Note, the link for downloading the tflite_runtime module is bound to change based on your Python version and platform/architecture. With time, newer versions will be also be released. I'll try my best to update this guide frequently, but the newest instructions for the installation are located [here](https://www.tensorflow.org/lite/guide/python)**
