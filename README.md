@@ -101,5 +101,5 @@ bash install-prerequisites.sh
 ```
 This might take a few minutes, but after everything has been installed you should get this message
 ```
-TensorFlow Object Detection API Setup Successfully!
+Prerequisites Installed Successfully
 ```
