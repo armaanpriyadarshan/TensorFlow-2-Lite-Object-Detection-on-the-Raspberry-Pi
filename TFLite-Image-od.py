@@ -133,3 +133,4 @@ cv2.waitKey(0)
 
 # Clean up
 cv2.destroyAllWindows()
+print("Done")
