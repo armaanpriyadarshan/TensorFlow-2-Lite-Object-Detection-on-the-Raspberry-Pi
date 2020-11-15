@@ -15,6 +15,9 @@ This guide is my 3rd in a series about the TensorFlow Object Detection API. Of m
 <p align="left">
   <img src="doc/tf vs tflite.png">
 </p>
+
+**It took over 3 minutes to load a TensorFlow model and less than a second to load TensorFlow Lite model. TensorFlow Lite is literally 5,693,400% faster(yes I did the math).**
+
 ## Table of Contents
 1. [Setting up the Raspberry Pi and Getting Updates]()
 2. [Organizing our Workspace and Virtual Environment]()
