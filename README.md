@@ -94,7 +94,7 @@ When you issue ```ls```, your ```tensorflow``` directory should now look somethi
   <img src="doc/directory.png">
 </p>
 
-## Installing the Prerequisites
+## Step 3: Installing the Prerequisites
 This step should be relatively simple. I have compressed all the commands into one shellscript which you can run with
 ```
 bash install-prerequisites.sh
@@ -120,3 +120,71 @@ If everything went according to plan, you should get
 2.5.0
 ```
 **Note: The link for downloading the tflite_runtime module is bound to change based on your Python version and platform/architecture. With time, newer versions will be also be released. I'll try my best to update this guide frequently, but the most recent instructions for the installation are located [here](https://www.tensorflow.org/lite/guide/python)**
+
+## Step 4: Running Object Detection on Image, Video, or Pi Camera
+Now we're finally ready to run object detection! In this repository, I've included a sample model that I converted as well as 3 object detection scripts utilizing OpenCV. If you want to convert a custom model or a pre-trained model, you can look at the [TensorFlow Lite Conversion Guide](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/TFLite-Conversion.md) that I wrote. 
+- ```TFLite-PiCamera-od.py```: This program uses the Pi Camera to perform object detection. It also counts and displays the number of objects detected in the frame. The usage is
+```
+usage: TFLite-PiCamera-od.py [-h] [--model MODEL] [--labels LABELS]
+                             [--threshold THRESHOLD] [--resolution RESOLUTION]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model MODEL         Provide the path to the TFLite file, default is
+                        models/model.tflite
+  --labels LABELS       Provide the path to the Labels, default is
+                        models/labels.txt
+  --threshold THRESHOLD
+                        Minimum confidence threshold for displaying detected
+                        objects
+  --resolution RESOLUTION
+                        Desired webcam resolution in WxH. If the webcam does
+                        not support the resolution entered, errors may occur.
+```
+- ```TFLite-Image-od.py```: This program takes a single image as input. I haven't managed to get it to run inference on a directory yet. If you do, feel free to share it as it might help others. This script also counts the number of detections. The usage is
+```
+usage: TFLite-Image-od.py [-h] [--model MODEL] [--labels LABELS]
+                          [--image IMAGE] [--threshold THRESHOLD]
+                          [--resolution RESOLUTION]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model MODEL         Provide the path to the TFLite file, default is
+                        models/model.tflite
+  --labels LABELS       Provide the path to the Labels, default is
+                        models/labels.txt
+  --image IMAGE         Name of the single image to perform detection on
+  --threshold THRESHOLD
+                        Minimum confidence threshold for displaying detected
+                        objects
+  --resolution RESOLUTION
+                        Desired webcam resolution in WxH. If the webcam does
+                        not support the resolution entered, errors may occur.
+ ```
+- ```TFLite-Video-od.py```: This program is similar to the last two however it takes a video as input. The usage is
+```
+usage: TFLite-Video-od.py [-h] [--model MODEL] [--labels LABELS]
+                          [--video VIDEO] [--threshold THRESHOLD]
+                          [--resolution RESOLUTION]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model MODEL         Provide the path to the TFLite file, default is
+                        models/model.tflite
+  --labels LABELS       Provide the path to the Labels, default is
+                        models/labels.txt
+  --video VIDEO         Name of the video to perform detection on
+  --threshold THRESHOLD
+                        Minimum confidence threshold for displaying detected
+                        objects
+  --resolution RESOLUTION
+                        Desired webcam resolution in WxH. If the webcam does
+                        not support the resolution entered, errors may occur.
+ ```
+ 
+ Now to finally test it out, run
+ ```
+ python TFLite-PiCamera-od.py
+ ```
+ If everything goes to plan you should get ouput similar to this
+ 
