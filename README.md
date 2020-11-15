@@ -10,6 +10,9 @@ This repository is a written tutorial covering two topics. TensorFlow Lite conve
 
 **I will soon make a YouTube Tutorial which will be posted [here](), and an extremely import step [here](https://www.youtube.com/channel/UCT9t2Bug62RDUfSBcPt0Bzg?sub_confirmation=1)!**
 
+## Why TensorFlow Lite?
+This guide is my 3rd in a series about the TensorFlow Object Detection API. Of my 2 previous guides, one of them is about TensorFlow Object Detection on the Raspberry Pi. If I already have a tutorial, why make another? TensorFlow Lite is a massive improvement from your standard TensorFlow installation. Not only is it so much easier to install and use, but the performance is significantly better. It's optimized to run on mobile and other edge devices such as the Raspberry Pi. The numbers speak for themselves!
+
 ## Table of Contents
 1. [Setting up the Raspberry Pi and Getting Updates]()
 2. [Organizing our Workspace and Virtual Environment]()
