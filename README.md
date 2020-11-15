@@ -93,3 +93,13 @@ When you issue ```ls```, your ```tensorflow``` directory should now look somethi
 <p align="left">
   <img src="doc/directory.png">
 </p>
+
+## Installing the Prerequisites
+This step should be relatively simple. I have compressed all the commands into one shellscript which you can run with
+```
+bash install-prerequisites.sh
+```
+This might take a few minutes, but after everything has been installed you should get this message
+```
+TensorFlow Object Detection API Setup Successfully!
+```
