@@ -186,7 +186,7 @@ optional arguments:
  ```
  python TFLite-PiCamera-od.py
  ```
- If everything goes to plan you should get ouput similar to this
+ If everything works you should get something like this
  <p align="left">
   <img src="doc/2020-11-15-230504_1920x1080_scrot.png">
 </p>
