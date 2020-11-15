@@ -19,7 +19,7 @@ This guide is my 3rd in a series about the TensorFlow Object Detection API. Of m
 **It took over 3 minutes to load a TensorFlow model and less than a second to load TensorFlow Lite model. TensorFlow Lite is literally 5,693,400% faster(yes I did the math).**
 
 ## Table of Contents
-1. [Setting up the Raspberry Pi and Getting Updates]()
+1. [Setting up the Raspberry Pi and Getting Updates](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/README.md#step-1-setting-up-the-raspberry-pi-and-getting-updates)
 2. [Organizing our Workspace and Virtual Environment]()
 3. [Installing the Prerequisites]()
 4. [Running Object Detection on Image, Video, or Pi Camera]()
