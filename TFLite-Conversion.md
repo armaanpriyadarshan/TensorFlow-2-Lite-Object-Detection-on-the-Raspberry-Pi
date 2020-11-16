@@ -15,7 +15,7 @@ To move on, you should have already**
   
 ## Steps
 1. [Creating a New Environment and Installing TensorFlow](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/TFLite-Conversion.md#creating-a-new-environment-and-installing-tensorflow)
-2. [Exporting the Model]()
+2. [Exporting the Model](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/TFLite-Conversion.md#exporting-the-model)
 3. [Converting the Model to TensorFlow Lite]()
 4. [Preparing our Model for Use]()
  
