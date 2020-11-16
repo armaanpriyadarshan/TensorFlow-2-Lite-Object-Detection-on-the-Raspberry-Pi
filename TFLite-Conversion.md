@@ -80,4 +80,30 @@ Now, you might have a question or two. If the program is called ```export_tflite
   <img src="doc/saved_model.png">
 </p>
 
-Well, in this step we'll be converting the ```saved_model``` to a single ```model.tflite``` file for object detection. 
+Well, in this step we'll be converting the ```saved_model``` to a single ```model.tflite``` file for object detection with tf-nightly. I recently added a sample converter program to my other repository called ```convert-to-tflite.py```. This script takes a saved_model folder for input and then converts the model to the .tflite format. Additionally, it also quantizes the model. If you take a look at the code, there are also various different features and options commented. These are optional and might be a little buggy. For some more information, take a look at the [TensorFlow Lite converter](https://www.tensorflow.org/lite/convert/). The usage of this program is as so
+
+```
+usage: convert-to-tflite.py [-h] [--model MODEL] [--output OUTPUT]
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --model MODEL    Folder that the saved model is located in
+  --output OUTPUT  Folder that the tflite model will be written to
+```
+
+At the moment I'd recommend not using the output argument and sticking to the default values as it still has a few errors. Enough talking, to convert the model run
+```
+python convert-to-tflite.py
+```
+
+You should now see a file in the ```exported-models\my_tflite_model\saved_model``` directory called ```model.tflite```
+
+<p align="left">
+  <img src="doc/model.tflite.png">
+</p>
+
+
+<p align="left">
+  <img src="doc/model.tflite.png">
+</p>
+
