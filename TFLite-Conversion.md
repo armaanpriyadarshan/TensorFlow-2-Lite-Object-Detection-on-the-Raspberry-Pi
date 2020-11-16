@@ -77,6 +77,7 @@ python export_tflite_graph_tf2.py --pipeline_config_path models\my_ssd_mobilenet
 ## Converting the Model to TensorFlow Lite
 Now, you might have a question or two. If the program is called ```export_tflite_graph_tf2.py```, why is the exported inference graph a ```saved_model.pb``` file? Isn't this the same as standard TensorFlow?
 <p align="left">
-  <img src="doc/Screenshot saved_model.png">
+  <img src="doc/saved_model.png">
 </p>
+
 Well, in this step we'll be converting the ```saved_model``` to a single ```model.tflite``` file for object detection. 
