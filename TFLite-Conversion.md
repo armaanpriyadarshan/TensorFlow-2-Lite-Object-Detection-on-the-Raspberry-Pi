@@ -70,6 +70,13 @@ cd C:\TensorFlow\workspace\training_demo
 ```
 Now, unlike my other guide, we aren't using ```exporter_main_v2.py``` to export the model. For TensorFlow Lite Models, we have to use ```export_tflite_graph_tf2.py```. You can export the model with
 ```
-python export_tflite_graph_tf2.py --pipeline_config_path models\my_ssd_mobilenet_v2_fpnlite\pipeline.config --trained_checkpoint_dir models\my_ssd_mobilenet_v2_fpnlite --output_directory exported-models\my_mobilenet_model
+python export_tflite_graph_tf2.py --pipeline_config_path models\my_ssd_mobilenet_v2_fpnlite\pipeline.config --trained_checkpoint_dir models\my_ssd_mobilenet_v2_fpnlite --output_directory exported-models\my_tflite_model
 ```
 **Note: At the moment, TensorFlow Lite only support models with the SSD Architecture (excluding EfficientDet). Make sure that you have trained with an SSD training pipeline before you continue. You can take a look at the [TensorFlow Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) or the [documentation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md) for the most up-to-date information.**
+
+## Converting the Model to TensorFlow Lite
+Now, you might have a question or two. If the program is called ```export_tflite_graph_tf2.py```, why is the exported inference graph a ```saved_model.pb``` file? Isn't this the same as standard TensorFlow?
+<p align="left">
+  <img src="doc/Screenshot saved_model.png">
+</p>
+Well, in this step we'll be converting the ```saved_model``` to a single ```model.tflite``` file for object detection. 
