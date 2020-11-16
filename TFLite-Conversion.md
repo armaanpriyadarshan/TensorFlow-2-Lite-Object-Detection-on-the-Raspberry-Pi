@@ -129,3 +129,9 @@ Once you are finished filling it out save the file within the ```exported-models
 </p>
 
 We're done! The model is now ready to be used. If you want to run on the Raspberry Pi, you can transfer the model any way you prefer. [WinSCP](https://winscp.net/eng/index.php), an SFTP client, is my favorite method. Place the ```model.tflite``` file and the ```labels.txt``` in the ```tensorflow/models``` directory on the Raspberry Pi. Once your done, it should look like this
+
+<p align="left">
+  <img src="doc/folder.png">
+</p>
+
+There you go, you're all set to run object detection on the Pi! Good Luck!
