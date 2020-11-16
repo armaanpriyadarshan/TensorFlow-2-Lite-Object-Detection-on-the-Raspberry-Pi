@@ -74,7 +74,7 @@ python export_tflite_graph_tf2.py --pipeline_config_path models\my_ssd_mobilenet
 ```
 **Note: At the moment, TensorFlow Lite only support models with the SSD Architecture (excluding EfficientDet). Make sure that you have trained with an SSD training pipeline before you continue. You can take a look at the [TensorFlow Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) or the [documentation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md) for the most up-to-date information.**
 
-## Converting the Model to TensorFlow Lite
+### Converting the Model to TensorFlow Lite
 Now, you might have a question or two. If the program is called ```export_tflite_graph_tf2.py```, why is the exported inference graph a ```saved_model.pb``` file? Isn't this the same as standard TensorFlow?
 <p align="left">
   <img src="doc/saved_model.png">
@@ -103,3 +103,27 @@ You should now see a file in the ```exported-models\my_tflite_model\saved_model`
 </p>
 
 Now, there is something very important to note with this file. Take a look at the file size of the ```model.tflite``` file. **If your file size is 1 KB, that means something has gone wrong with conversion**. If you were to run object detection with this model, you will get various errors. As you can see in the image, my model is 3,549 KB which is an appropriate size. If your file is significantly bigger, 121,000 KB for example, it will drastically impact performance while running. With a model that big, my framerates dropped all the way down to 0.07 FPS. If you have any questions about this, feel free to raise an issue and I will try my best to help you out. 
+
+### Preparing our Model for Use
+Now that we have our model, it's time to create a new labelmap. Unlike standard TensorFlow, TensorFlow uses a .txt file instead of a .pbtxt file. Creating a new labelmap is actually much easier than it sounds. Let's take a look at an example. Below, I have provided the ```label_map.pbtxt``` that I used for my Pill Detection model.
+```
+item {
+    id: 1
+    name: 'Acetaminophen 325 MG Oral Tablet'
+}
+
+item {
+    id: 2
+    name: 'Ibuprofen 200 MG Oral Tablet'
+}
+```
+If we were to create a new labelmap for TensorFlow Lite, all we have to do is write each of the item names on it's own line like so
+```
+Acetaminophen 325 MG Oral Tablet
+Ibuprofen 200 MG Oral Tablet
+```
+Once you are finished filling it out save the file within the ```exported-models\my_tflite_model\saved_model``` as ```labels.txt```. The directory should now look like this
+
+<p align="left">
+  <img src="doc/final model.png">
+</p>
