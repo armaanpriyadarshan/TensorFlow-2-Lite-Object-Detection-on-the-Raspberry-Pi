@@ -62,5 +62,14 @@ Assuming you followed my previous guide, your directory structure should look so
 <p align="left">
   <img src="doc/Screenshot 2020-11-16 104855.png">
 </p>
-If you haven't already, make sure you have already configured the training pipeline and trained the model. You should now have a training directory (if you followed my other guide, this is ```models\my_ssd_mobilenet_v2_fpnlite```) and a ```pipeline.config``` file (```models\my_ssd_mobilenet_v2_fpnlite\pipeline.config```). 
-Before we can convert the model to TensorFlow Lite, we must export it into a certain format.
+
+If you haven't already, make sure you have already configured the training pipeline and trained the model. You should now have a training directory (if you followed my other guide, this is ```models\my_ssd_mobilenet_v2_fpnlite```) and a ```pipeline.config``` file (```models\my_ssd_mobilenet_v2_fpnlite\pipeline.config```). In the Anaconda terminal, switch over to the ```training_demo``` directory with 
+
+```
+cd C:\TensorFlow\workspace\training_demo
+```
+Now, unlike my other guide, we aren't using ```exporter_main_v2.py``` to export the model. For TensorFlow Lite Models, we have to use ```export_tflite_graph_tf2.py```. You can export the model with
+```
+python export_tflite_graph_tf2.py --pipeline_config_path models\my_ssd_mobilenet_v2_fpnlite\pipeline.config --trained_checkpoint_dir models\my_ssd_mobilenet_v2_fpnlite --output_directory exported-models\my_mobilenet_model
+```
+**Note: At the moment, TensorFlow Lite only support models with the SSD Architecture (excluding EfficientDet). Make sure that you have trained with an SSD training pipeline before you continue. You can take a look at the [TensorFlow Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) and the [documentation](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/running_on_mobile_tf2.md) for the most up-to-date information.**
