@@ -21,11 +21,10 @@ To move on, you should have already
 ### Preparing our Workspace
 To avoid version conflicts, we'll first create a new Anaconda virtual environment to hold all the packages necessary for conversion. To do so, open up a new Anaconda terminal and issue
 ```
-conda create -n tflite
+conda create -n tflite pip python=3.7
 ```
 
-Since we have not specified the Python version, Anaconda will use whatever version of Python you have on your machine. I used Python 3.7.8 which was stable for me. If you do get 
-errors later on, I'd recommend using this version of Python and it might resolve your issues. We can now activate our environment with
+We can now activate our environment with
 
 ```
 conda activate tflite
