@@ -57,3 +57,5 @@ If the installation was successful, you should get the version of tf-nightly tha
 ```
 2.5.0-dev20201111
 ```
+### Exporting the Model
+Before we can convert the model to TensorFlow Lite, we must export it into a certain format. If you haven't already, make sure you have already configured the training pipeline and trained the model. You should now have a training directory (if you followed my other guide, this is ```models\my_ssd_mobilenet_v2_fpnlite```) and a ```pipeline.config``` file (```models\my_ssd_mobilenet_v2_fpnlite\pipeline.config```). Assuming you followed my previous guide, your directory structure should look something like this
