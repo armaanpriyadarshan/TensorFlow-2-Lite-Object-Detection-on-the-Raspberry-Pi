@@ -32,28 +32,19 @@ conda activate tflite
 
 **Note that whenever you open a new Anaconda Terminal you will not be in the virtual environment. So if you open a new prompt make sure to use the command above to activate the virtual environment**
 
-Now we must install TensorFlow in this virtual environment. There is a GPU and CPU version, but since we are just using it for conversion I'd recommend sticking to the CPU version. We can install it with
+Now we must install TensorFlow in this virtual environment. However, in this environment we will not just be installing standard TensorFlow. We are going to install tf-nightly. This package is a nightly updated build of TensorFlow. This means it contains the very latest features that TensorFlow has to offer. We can install it with 
 
 ```
-pip install tensorflow
+pip install tf-nightly
+```
+Now, to test our installation let's use a Python terminal.
+```
+python
+```
+Then import the module with
+```
+Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
 ```
 
-Now, we'll be installing pycocotools in this environment with
-
-```
-pip install cython
-pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
-```
-
-Since you already setup the Object Detection API in the last tutorial, I'm assuming that you already have the Visual C++ 2015 build tools installed and on your path. If not make sure to install it [here](https://go.microsoft.com/fwlink/?LinkId=691126) to prevent pycocotools errors. Now go to the ```models\research``` directory with
-
-```
-cd C:\TensorFlow\models\research
-```
-
-Once here, copy and run the setup script with
-
-```
-copy object_detection\packages\tf2\setup.py .
-python -m pip install .
-```
