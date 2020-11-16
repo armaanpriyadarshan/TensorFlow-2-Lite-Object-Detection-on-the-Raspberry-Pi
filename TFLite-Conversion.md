@@ -33,10 +33,10 @@ conda activate tflite
 
 **Note that whenever you open a new Anaconda Terminal you will not be in the virtual environment. So if you open a new prompt make sure to use the command above to activate the virtual environment**
 
-Now we must install TensorFlow in this virtual environment. There is a GPU and CPU version, but since we are just using it for conversion I'd recommend sticking to the CPU version. I found a few errors with the newest version, so I'll be using TensorFlow 2.2.0. We can install it with
+Now we must install TensorFlow in this virtual environment. There is a GPU and CPU version, but since we are just using it for conversion I'd recommend sticking to the CPU version. We can install it with
 
 ```
-pip install tensorflow==2.2.0
+pip install tensorflow
 ```
 
 Now, we'll be installing pycocotools in this environment with
