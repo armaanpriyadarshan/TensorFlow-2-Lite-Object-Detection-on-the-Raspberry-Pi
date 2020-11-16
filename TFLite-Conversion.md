@@ -18,7 +18,7 @@ To move on, you should have already
   - Gathered Training Data
   - Trained your Model (without exporting)
 
-### Preparing our Workspace
+### Creating a New Environment
 To avoid version conflicts, we'll first create a new Anaconda virtual environment to hold all the packages necessary for conversion. To do so, open up a new Anaconda terminal and issue
 ```
 conda create -n tflite pip python=3.7
