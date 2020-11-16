@@ -33,4 +33,28 @@ conda activate tflite
 
 **Note that whenever you open a new Anaconda Terminal you will not be in the virtual environment. So if you open a new prompt make sure to use the command above to activate the virtual environment**
 
-Now we must install TensorFlow in this virtual environment. There is a GPU and CPU version, but since we are just using it for conversion I'd recommend sticking to the CPU version
+Now we must install TensorFlow in this virtual environment. There is a GPU and CPU version, but since we are just using it for conversion I'd recommend sticking to the CPU version. I found a few errors with the newest version, so I'll be using TensorFlow 2.2.0. We can install it with
+
+```
+pip install tensorflow==2.2.0
+```
+
+Now, we'll be installing pycocotools in this environment with
+
+```
+pip install cython
+pip install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+```
+
+Since you already setup the Object Detection API in the last tutorial, I'm assuming that you already have the Visual C++ 2015 build tools installed and on your path. If not make sure to install it [here](https://go.microsoft.com/fwlink/?LinkId=691126) to prevent pycocotools errors. Now go to the ```models\research``` directory with
+
+```
+cd C:\TensorFlow\models\research
+```
+
+Once here, copy and run the setup script with
+
+```
+copy object_detection\packages\tf2\setup.py .
+python -m pip install .
+```
