@@ -102,8 +102,3 @@ You should now see a file in the ```exported-models\my_tflite_model\saved_model`
   <img src="doc/model.tflite.png">
 </p>
 
-
-<p align="left">
-  <img src="doc/model.tflite.png">
-</p>
-
