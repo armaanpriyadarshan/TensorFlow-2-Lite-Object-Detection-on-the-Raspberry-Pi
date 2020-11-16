@@ -1,7 +1,7 @@
 # Converting TensorFlow Models to TensorFlow Lite
 [![TensorFlow 2.2](https://img.shields.io/badge/TensorFlow-2.2-FF6F00?logo=tensorflow)](https://github.com/tensorflow/tensorflow/releases/tag/v2.2.0)
 ### This Guide Contains Everything you Need to Convert Custom and Pre-trained TensorFlow Models to TensorFlow Lite
-I'll be covering two options. Converting a custom model and converting a pre-trained model. If you want to train a custom TensorFlow object detection model, I've made a detailed [GitHub guide](https://github.com/armaanpriyadarshan/Training-a-Custom-TensorFlow-2.X-Object-Detector) and a YouTube video on the topic.
+Following these intstructions, you can convert either a custom model or convert a pre-trained TensorFlow model. If you want to train a custom TensorFlow object detection model, I've made a detailed [GitHub guide](https://github.com/armaanpriyadarshan/Training-a-Custom-TensorFlow-2.X-Object-Detector) and a YouTube video on the topic.
 
 [![Link to my vid](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/doc/Thumbnail2.png)](https://www.youtube.com/watch?v=oqd54apcgGE)
 
@@ -14,7 +14,7 @@ To move on, you should have already**
   - **Trained your Model (without exporting)**
   
 ## Steps
-1. [Creating a New Environment and Installing TensorFlow]()
+1. [Creating a New Environment and Installing TensorFlow](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/TFLite-Conversion.md#creating-a-new-environment-and-installing-tensorflow)
 2. [Exporting the Model]()
 3. [Converting the Model to TensorFlow Lite]()
 4. [Preparing our Model for Use]()
