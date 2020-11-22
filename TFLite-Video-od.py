@@ -120,8 +120,8 @@ while(video.isOpened()):
             cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) # Draw label text
             current_count+=1
     # Draw framerate in corner of frame
-    cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
-    cv2.putText (frame,'Total Detection Count : ' + str(current_count),(30,100),cv2.FONT_HERSHEY_SIMPLEX,1,(98,189,184),2,cv2.LINE_AA)
+    cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(15,25),cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,55),2,cv2.LINE_AA)
+    cv2.putText (frame,'Total Detection Count : ' + str(current_count),(15,65),cv2.FONT_HERSHEY_SIMPLEX,1,(0,255,55),2,cv2.LINE_AA)
     # All the results have been drawn on the frame, so it's time to display it.
     cv2.imshow('Object Detector', frame)
 
