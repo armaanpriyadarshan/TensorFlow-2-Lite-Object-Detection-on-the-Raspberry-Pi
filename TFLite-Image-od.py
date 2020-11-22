@@ -26,7 +26,7 @@ parser.add_argument('--threshold', help='Minimum confidence threshold for displa
 parser.add_argument('--resolution', help='Desired webcam resolution in WxH. If the webcam does not support the resolution entered, errors may occur.',
                     default='1280x720')
                     
-args = parser.parse_args()
+args = parser.parse_args()                              
 
 # PROVIDE PATH TO MODEL DIRECTORY
 PATH_TO_MODEL_DIR = args.model
@@ -40,8 +40,6 @@ IMAGE_PATH = args.image
 # PROVIDE THE MINIMUM CONFIDENCE THRESHOLD
 MIN_CONF_THRESH = float(args.threshold)
 
-resW, resH = args.resolution.split('x')
-imW, imH = int(resW), int(resH)
 import time
 print('Loading model...', end='')
 start_time = time.time()
@@ -79,6 +77,7 @@ print('Running inference for {}... '.format(IMAGE_PATH), end='')
 # Acquire frame and resize to expected shape [1xHxWx3]
 image = cv2.imread(IMAGE_PATH)
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+imH, imW, _ = image.shape
 image_resized = cv2.resize(image_rgb, (width, height))
 input_data = np.expand_dims(image_resized, axis=0)
 
