@@ -20,8 +20,6 @@ parser.add_argument('--video', help='Name of the video to perform detection on',
                     default='test.mp4')
 parser.add_argument('--threshold', help='Minimum confidence threshold for displaying detected objects',
                     default=0.5)
-parser.add_argument('--resolution', help='Desired webcam resolution in WxH. If the webcam does not support the resolution entered, errors may occur.',
-                    default='1280x720')
                     
 args = parser.parse_args()
 
@@ -37,8 +35,6 @@ VIDEO_PATH = args.video
 # PROVIDE THE MINIMUM CONFIDENCE THRESHOLD
 MIN_CONF_THRESH = float(args.threshold)
 
-resW, resH = args.resolution.split('x')
-imW, imH = int(resW), int(resH)
 import time
 print('Loading model...', end='')
 start_time = time.time()
@@ -70,6 +66,8 @@ freq = cv2.getTickFrequency()
 print('Running inference for {}... '.format(VIDEO_PATH), end='')
 # Initialize video
 video = cv2.VideoCapture(VIDEO_PATH)
+imW = video.get(cv2.CAP_PROP_FRAME_WIDTH)
+imH = video.get(cv2.CAP_PROP_FRAME_HEIGHT)
 while(video.isOpened()):
     # Start timer (for calculating frame rate)
     current_count=0
