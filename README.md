@@ -8,7 +8,7 @@
 ## Introduction
 This repository is a written tutorial covering two topics. TensorFlow Lite conversion and running on the Raspberry Pi. This document contains instructions for running on the Raspberry Pi. If you want to convert a Custom TensorFlow 2 Object Detection Model, please refer to the [conversion guide](https://github.com/armaanpriyadarshan/TensorFlow-2-Lite-Object-Detection-on-the-Raspberry-Pi/blob/main/TFLite-Conversion.md). These instructions are likely to change often with time, so if you have questions feel free to raise an issue. ***This guide has last been tested and updated on 11/13/2020.***
 
-**I will soon make a YouTube Tutorial which will be posted [here](), and an extremely import step [here](https://www.youtube.com/channel/UCT9t2Bug62RDUfSBcPt0Bzg?sub_confirmation=1)!**
+**I will soon make a YouTube Tutorial which will be posted [here](https://www.youtube.com/watch?v=2ofuUdCDppc), and an extremely import step [here](https://www.youtube.com/channel/UCT9t2Bug62RDUfSBcPt0Bzg?sub_confirmation=1)!**
 
 ## Why TensorFlow Lite?
 This guide is my 3rd in a series about the TensorFlow Object Detection API. Of my 2 previous guides, one of them is about TensorFlow Object Detection on the Raspberry Pi. If I already have a tutorial, why make another? TensorFlow Lite is a massive improvement from your standard TensorFlow installation. Not only is it so much easier to install and use, but the performance is significantly better. It's optimized to run on mobile and other edge devices such as the Raspberry Pi. The numbers speak for themselves!
