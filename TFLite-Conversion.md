@@ -116,44 +116,6 @@ You should now see a file in the ```exported-models\my_tflite_model\saved_model`
 
 Now, there is something very important to note with this file. Take a look at the file size of the ```model.tflite``` file. **If your file size is 1 KB, that means something has gone wrong with conversion**. If you were to run object detection with this model, you will get various errors. As you can see in the image, my model is 3,549 KB which is an appropriate size. If your file is significantly bigger, 121,000 KB for example, it will drastically impact performance while running. With a model that big, my framerates dropped all the way down to 0.07 FPS. If you have any questions about this, feel free to raise an issue and I will try my best to help you out. 
 
-### Creating a New Environment and Installing TensorFlow
-To avoid version conflicts, we'll first create a new Anaconda virtual environment to hold all the packages necessary for conversion. To do so, open up a new Anaconda terminal and issue
-```
-conda create -n tflite pip python=3.7
-```
-
-We can now activate our environment with
-
-```
-conda activate tflite
-```
-
-**Note that whenever you open a new Anaconda Terminal you will not be in the virtual environment. So if you open a new prompt make sure to use the command above to activate the virtual environment**
-
-Now we must install TensorFlow in this virtual environment. However, in this environment we will not just be installing standard TensorFlow. We are going to install tf-nightly. This package is a nightly updated build of TensorFlow. This means it contains the very latest features that TensorFlow has to offer. There is a CPU and GPU version, but if you are only using it conversion I'd stick to the CPU version because it doesn't really matter. We can install it by issuing
-
-```
-pip install tf-nightly
-```
-Now, to test our installation let's use a Python terminal.
-```
-python
-```
-Then import the module with
-```
-Python 3.7.9 (default, Aug 31 2020, 17:10:11) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
-Type "help", "copyright", "credits" or "license" for more information.
->>> import tensorflow as tf
->>> print(tf.__version)
-```
-
-**Note: You might get an error with importing the newest version of Numpy. It looks something like this ```RuntimeError: The current Numpy installation ('D:\\Apps\\anaconda3\\envs\\tflite\\lib\\site-packages\\numpy\\__init__.py') fails to pass a sanity check due to a bug in the windows runtime. See this issue for more information: https://tinyurl.com/y3dm3h86```. You can fix this error by installing a previous version of Numpy with ```pip install numpy==1.19.3```.**
-
-If the installation was successful, you should get the version of tf-nightly that you installed. 
-```
-2.5.0-dev20201111
-```
-
 ### Preparing our Model for Use
 Now that we have our model, it's time to create a new labelmap. Unlike standard TensorFlow, TensorFlow uses a .txt file instead of a .pbtxt file. Creating a new labelmap is actually much easier than it sounds. Let's take a look at an example. Below, I have provided the ```label_map.pbtxt``` that I used for my Pill Detection model.
 ```
